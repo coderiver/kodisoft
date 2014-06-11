@@ -53,6 +53,7 @@
 	font-family: "unit_slab_offc_probold",arial,sans-serif	 	 
 // vars
 $dark: #292929
+$green: #73d037
 	
 body
 	min-width: 1158px
@@ -81,7 +82,25 @@ body
 	line-height: normal
 	vertical-align: top
 	font-size: 16px
-	
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -90px
+.push
+	height: 90px
+// titles
+.h1
+	margin-bottom: 15px
+	font-size: 60px
+	+usb
+	color: $dark	
+.subtitle
+	margin-bottom: 50px
+	font-size: 56px
+	color: $dark
+	+us
+	line-height: 1.2  
 //header
 .header
 	height: 110px
@@ -101,6 +120,9 @@ body
 			top: -7px
 			left: 0px
 			+s(logo-green)
+		.laboratory-page &
+			&:before
+				+s(logo-blue)	
 .nav
 	text-align: right
 	&__list
@@ -117,71 +139,12 @@ body
 			+tr(color 200ms)
 			&:hover
 				color: #666
-				
-// slider
-.slider
-	&__item
-		position: relative
-		width: 100% 
-		max-height: 595px
-		overflow: hidden
-		img
-			width: 100% 
-	&__text		
-		position: absolute
-		bottom: 44px
-		left: 50%
-		margin-left: -579px
-		padding: 18px 24px
-		font-size: 27px
-		+usb
-		background: #fff
-	&__pager
-		height: 54px
-		line-height: 54px
-		text-align: center
-		span
-			display: inline-block
-			vertical-align: middle
-			width: 9px
-			height: 9px
-			margin: 0 5px 
-			border-radius: 50%
-			font-size: 0
-			background: #c3c3c3
-			cursor: pointer
-			&.cycle-pager-active
-				background: $dark
+			&.is-active
+				color: $green
+			.laboratory-page &
+				&.is-active
+					color: #00d1fe
 
-// m-news
-.news__inner
-	margin-bottom: 100px
-.news__item 
-	display: block
-	text-decoration: none
-	color: $dark
-	&:hover
-		.news__title
-			color: #73d037
-.news__img
-	font-size: 0
-	margin-bottom: 24px 
-	img
-		width: 100% 
-.news__title
-	margin-bottom: 15px
-	font-size: 24px 
-	color: $dark
-	+tr(color 200ms)
-	+usb
-.news__more 
-	text-align: center
-	margin-bottom: 70px
-	a
-		font-size: 20px
-		text-decoration: none
-		color: #8dbb00
-		
 // footer
 .footer
 	border-top: 1px solid #e6e6e6
@@ -222,6 +185,21 @@ body
 			+tr(color 200ms)	
 			&:hover
 				color: #666
+				
+.bottom-push
+	height: 125px				
+// btn
+.btn
+	display: inline-block
+	height: 96px
+	width: 390px
+	background: $green
+	color: #fff
+	+ur
+	font-size: 18px
+	+tr(background 200ms)
+	&:hover
+		background: darken($green, 10%)  					
 						
 			 	
 

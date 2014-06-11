@@ -1,0 +1,121 @@
+// index page
+
+// slider
+.slider
+	&__item
+		position: relative
+		width: 100% 
+		max-height: 595px
+		overflow: hidden
+		img
+			width: 100% 
+	&__text		
+		position: absolute
+		bottom: 44px
+		left: 50%
+		margin-left: -579px
+		padding: 18px 24px
+		font-size: 27px
+		+usb
+		background: #fff
+	&__pager
+		height: 54px
+		line-height: 54px
+		text-align: center
+		span
+			display: inline-block
+			vertical-align: middle
+			width: 9px
+			height: 9px
+			margin: 0 5px 
+			border-radius: 50%
+			font-size: 0
+			background: #c3c3c3
+			cursor: pointer
+			&.cycle-pager-active
+				background: $dark
+
+// m-news
+.news__inner
+	margin-bottom: 100px
+.news__item 
+	display: block
+	text-decoration: none
+	color: $dark
+	&:hover
+		.news__title
+			color: #73d037
+.news__img
+	font-size: 0
+	margin-bottom: 24px 
+	img
+		width: 100% 
+.news__title
+	margin-bottom: 15px
+	font-size: 24px 
+	color: $dark
+	+tr(color 200ms)
+	+usb
+.news__more 
+	text-align: center
+	margin-bottom: 70px
+	a
+		font-size: 20px
+		text-decoration: none
+		color: #8dbb00
+ 
+// laboratory
+.menu
+	margin-bottom: 140px
+	&__list
+		+clr
+	&__item
+		float: left
+		width: 33.333% 
+	&__link
+		position: relative
+		display: block
+		overflow: hidden
+		max-height: 800px
+		font-size: 0
+		img
+			width: 100%
+			height: 100%
+		span
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			margin-top: -36px
+			text-align: center
+			font-size: 52px
+			+usb
+			color: #fff
+			z-index: 2
+		&.interships
+			span
+				color: #1b1b1b
+.internships
+	margin-bottom: 50px
+	&__img
+		margin-bottom: 25px
+		font-size: 0
+		text-align: center						  			 
+	&__title
+		margin-bottom: 25px
+		+usb
+		font-size: 38px
+		color: $dark	
+	&__text
+		font-size: 18px
+.about
+	height: 395px
+	margin-bottom: 50px
+	background: url(../img/about.jpg) 50% 0 no-repeat
+	+cover
+	&__inner
+		padding-top: 80px
+		width: 768px
+		margin: 0 auto
+		color: #fff
+		font-size: 27px    			 	
