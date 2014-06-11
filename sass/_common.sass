@@ -51,8 +51,11 @@
 +font(unit_slab_offc_probold, unit_slab_offc_pro_bold-webfont)  	
 =usb
 	font-family: "unit_slab_offc_probold",arial,sans-serif	 	 
+// vars
+$dark: #292929
 	
 body
+	min-width: 1158px
 	font-size: 16px 
 	+ur 
 	line-height: 1.4
@@ -80,14 +83,147 @@ body
 	font-size: 16px
 	
 //header
+.header
+	height: 110px
 .logo
-	position: relative
+	padding-top: 29px 
+	a
+		position: relative
+		display: inline-block
+		padding-left: 75px
+		font-size: 26px
+		color: #000
+		+usb
+		text-decoration: none
+		&:before
+			content: ""
+			position: absolute
+			top: -7px
+			left: 0px
+			+s(logo-green)
+.nav
+	text-align: right
+	&__list
+		padding-top: 39px
+		font-size: 0
+	&__link
+		display: inline-block
+		margin-left: 45px  
+		font-size: 21px
+		a
+			color: $dark
+			+us
+			text-decoration: none
+			+tr(color 200ms)
+			&:hover
+				color: #666
+				
+// slider
+.slider
+	&__item
+		position: relative
+		width: 100% 
+		max-height: 595px
+		overflow: hidden
+		img
+			width: 100% 
+	&__text		
+		position: absolute
+		bottom: 44px
+		left: 50%
+		margin-left: -579px
+		padding: 18px 24px
+		font-size: 27px
+		+usb
+		background: #fff
+	&__pager
+		height: 54px
+		line-height: 54px
+		text-align: center
+		span
+			display: inline-block
+			vertical-align: middle
+			width: 9px
+			height: 9px
+			margin: 0 5px 
+			border-radius: 50%
+			font-size: 0
+			background: #c3c3c3
+			cursor: pointer
+			&.cycle-pager-active
+				background: $dark
+
+// m-news
+.news__inner
+	margin-bottom: 100px
+.news__item 
 	display: block
-	padding-left: 75px
-	font-size: 26px
-	color: #000
+	text-decoration: none
+	color: $dark
+	&:hover
+		.news__title
+			color: #73d037
+.news__img
+	font-size: 0
+	margin-bottom: 24px 
+	img
+		width: 100% 
+.news__title
+	margin-bottom: 15px
+	font-size: 24px 
+	color: $dark
+	+tr(color 200ms)
 	+usb
-	text-decoration: none 		
+.news__more 
+	text-align: center
+	margin-bottom: 70px
+	a
+		font-size: 20px
+		text-decoration: none
+		color: #8dbb00
+		
+// footer
+.footer
+	border-top: 1px solid #e6e6e6
+	padding-top: 24px
+	height: 65px
+.copyrights
+	display: inline-block
+	vertical-align: middle
+	margin-right: 60px 
+	color: #818181
+	font-size: 15px
+.socials
+	display: inline-block
+	vertical-align: middle	 		 
+	&__list
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-right: 16px 
+			a
+				display: block
+.tw
+	+s(tw)
+.fb
+	+s(fb)
+.footer__menu 
+	font-size: 0 
+	text-align: right
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-left: 28px 
+		a
+			font-size: 17px
+			color: #2b2b2b
+			text-decoration: none
+			+tr(color 200ms)	
+			&:hover
+				color: #666
+						
+			 	
 
 
       

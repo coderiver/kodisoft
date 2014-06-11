@@ -1,5 +1,14 @@
 head.ready(function() {
 
+// cycle init
+
+	$(".js-slider").cycle({
+		slides: '> div',
+		pager: '.slider__pager'
+	});
+
+// document click
+
 	var agent = navigator.userAgent,
 	event = (agent.match(/iPad/i)) ? "touchstart" : "click";
 
@@ -7,5 +16,5 @@ head.ready(function() {
 		$(".js-popup").hide();
 	});
 
-	console.log($('body').html());
+
 });
