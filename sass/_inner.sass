@@ -118,4 +118,90 @@
 		width: 768px
 		margin: 0 auto
 		color: #fff
-		font-size: 27px    			 	
+		font-size: 27px
+		
+// r&d
+.rd-text
+	p
+		margin-bottom: 50px
+		+us
+		font-size: 40px
+		color: $dark
+		line-height: 1.2
+		b
+			+usb
+.rd	
+	position: relative
+	&__nav
+		position: absolute
+		top: 47px
+		right: 22px
+		z-index: 1
+	&__nav-inner
+		text-align: right
+		&.is-fixed
+			position: fixed
+			top: 47px
+			right: 22px
+		li
+			a
+				position: relative
+				font-size: 0px
+				display: block
+				min-height: 18px
+				padding-right: 19px
+				color: $dark
+				text-decoration: none
+				&:before
+					content: ""
+					position: absolute
+					top: 6px
+					right: 2px
+					width: 6px
+					height: 6px
+					background: $dark
+					border-radius: 50%  
+				&.is-active
+					font-size: 13px
+					&:before
+						top: 4px
+						right: 0
+						border: 2px solid $dark
+						background: transparent   			
+	&__dreams
+		position: relative
+		height: 100%
+		background: #ffd529
+		.rd__title
+			color: $dark
+	&__restaurant
+		position: relative
+		height: 100%
+		background: #009539
+	&__fashion
+		position: relative
+		height: 100%
+		background: #ff014a
+	&__title
+		padding: 50px 0 
+		font-size: 72px
+		+usb
+		line-height: 1
+		color: #fff
+	&__img		  	  
+		position: absolute
+		top: 200px
+		left: 0
+		right: 0
+		bottom: 0
+		text-align: center
+		vertical-align: middle
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle  		    			 	
