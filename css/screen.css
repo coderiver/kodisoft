@@ -152,6 +152,6 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .rd__restaurant { position: relative; height: 100%; background: #009539; }
 .rd__fashion { position: relative; height: 100%; background: #ff014a; }
 .rd__title { padding: 50px 0; font-size: 72px; font-family: "unit_slab_offc_probold", arial, sans-serif; line-height: 1; color: white; }
-.rd__img { position: absolute; top: 200px; left: 0; right: 0; bottom: 0; text-align: center; vertical-align: middle; }
+.rd__img { padding: 50px 0; text-align: center; vertical-align: middle; }
 .rd__img:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
 .rd__img img { display: inline-block; vertical-align: middle; }
