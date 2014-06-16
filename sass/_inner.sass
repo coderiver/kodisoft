@@ -131,43 +131,7 @@
 		b
 			+usb
 .rd	
-	position: relative
-	&__nav
-		position: absolute
-		top: 47px
-		right: 22px
-		z-index: 1
-	&__nav-inner
-		text-align: right
-		&.is-fixed
-			position: fixed
-			top: 47px
-			right: 22px
-		li
-			a
-				position: relative
-				font-size: 0px
-				display: block
-				min-height: 18px
-				padding-right: 19px
-				color: $dark
-				text-decoration: none
-				&:before
-					content: ""
-					position: absolute
-					top: 6px
-					right: 2px
-					width: 6px
-					height: 6px
-					background: $dark
-					border-radius: 50%  
-				&.is-active
-					font-size: 13px
-					&:before
-						top: 4px
-						right: 0
-						border: 2px solid $dark
-						background: transparent   			
+	position: relative   			
 	&__dreams
 		position: relative
 		height: 100%
@@ -200,4 +164,333 @@
 			vertical-align: middle
 		img
 			display: inline-block
-			vertical-align: middle  		    			 	
+			vertical-align: middle
+			
+.products
+	position: relative
+	&__inner
+		padding: 20px 0 90px  
+	&__title
+		margin-bottom: 15px
+		font-size: 67px
+		text-align: center
+		+usb
+		color: $dark
+	&__subtitle
+		margin-bottom: 30px 
+		font-size: 20px
+		text-align: center
+	&__descr
+		width: 760px
+		margin: 0 auto 45px
+		font-size: 20px
+		line-height: 1.3
+		p
+			margin-top: 25px
+			&:first-child
+				margin-top: 0
+	&__item
+		.slider__item
+			text-align: center
+			//height: 700px
+			max-height: 700px
+			vertical-align: middle 
+			img
+				width: auto
+				max-width: 100%
+		.slider__pager
+			position: relative
+			top: -54px
+			z-index: 999
+			span
+				width: 13px
+				height: 13px
+				background: rgba(#292929, .5)
+				&.cycle-pager-active
+					background: #fff			 	
+		 			
+//restaurant
+.restaurant
+	&__img
+		position: relative
+		background: #e6e6e6 url(../img/restaurant.jpg) 50% 50%
+		text-align: center
+		font-size: 0
+		img
+			max-width: 100%
+.kocloud
+	&__img
+		font-size: 0
+		background: #62d9ff
+		text-align: center
+		img
+			max-width: 100%
+.mcloud
+	&__img
+		font-size: 0
+		background: #00bcf2
+		text-align: center
+		img
+			width: 100%
+.avimir
+	.slider__item
+		background: #ea5032
+		height: 700px
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle
+.kolight
+	&__img
+		font-size: 0
+		background: #ffcb27
+		text-align: center
+		img
+			max-width: 100%
+.idbm
+	.slider__item
+		position: relative
+		height: 700px 
+		background: #edf1f6
+		padding-top: 145px
+		+box
+	&__text
+		position: absolute
+		top: 75px
+		left: 50%
+		margin-left: -400px
+		width: 410px
+		font-size: 28px
+		text-align: left
+.bookpro
+	.slider__item
+		background: #cdf000
+		height: 700px
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			max-width: 100% 
+			vertical-align: middle
+.bussinesspro
+	.slider__item
+		background: #333741
+.portal
+	.slider__item
+		background: #5ac6ff
+		height: 700px
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle
+.medicalpro, .prodoffice, .doll
+	.slider__item
+		height: 700px
+		background: #7aebff
+		font-size: 0
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle
+.master-test
+	&__img
+		font-size: 0
+		img
+			width: 100%
+.pseudo-weber
+	&__img	
+		padding-top: 50px
+		background: #f2f1ef
+		text-align: center
+		font-size: 0
+.prodoffice
+	.slider__item
+		background: #f0f3e9 		 		
+.doll		 						 			 		 			 		
+	.slider__item
+		background: #f56e97
+.witboard
+	&__img
+		font-size: 0
+		background: #40d2ff
+		height: 700px 
+		text-align: center 
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			max-width: 100%
+			display: inline-block
+			vertical-align: middle
+.koditouch
+	&__img
+		background: #f0f2f4
+		font-size: 0
+		img
+			width: 100%
+.agelma
+	.slider__item
+		background: #ffd101 
+		height: 700px
+		text-align: center
+		font-size: 0
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle
+.lesexpress
+	.slider__item
+		background: url(../img/pict9.jpg)
+		+cover
+		height: 700px
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle
+.tsm
+	&__img
+		font-size: 0
+		img
+			width: 100%			
+.inthouse
+	&__img
+		position: relative
+		height: 700px
+		background: #ffd101 url(../img/img33.png) 50% 50% no-repeat
+	&__icons
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 50%
+		width: 850px
+		margin-left: -425px
+		&.is-animated
+			.inthouse__icon
+				+opacity(1)  	
+	&__icon
+		position: absolute
+		+opacity(0)
+		+transition(opacity 1000ms)	  
+@for $i from 1 through 6
+	.inthouse#{$i}
+		+s(icon#{$i})
+.inthouse1
+	top: 157px
+	left: -17px
+.inthouse2
+	top: 30px
+	left: 210px
+	+transition-delay(200ms)	
+.inthouse3
+	top: 30px
+	right: 100px
+	+transition-delay(400ms)
+.inthouse4
+	top: 217px
+	right: -47px
+	+transition-delay(600ms)
+.inthouse5
+	bottom: 148px
+	right: 105px
+	+transition-delay(800ms)
+.inthouse6
+	bottom: 65px
+	left: 328px
+	+transition-delay(1s)
+.watchdog
+	&__img
+		height: 700px
+		background: #b42142
+		text-align: center
+	&__terminal
+		position: relative
+		display: inline-block
+		height: 100% 
+		width: 750px
+		background: url(../img/terminal.png) 100% 100% no-repeat
+	&__pict
+		position: absolute
+		top: 50%
+		left: 40%
+		width: 418px
+		height: 418px
+		background: url(../img/terminal2.png) 0 0 no-repeat
+		+transform(scale(.2))
+		+opacity(0)
+		+transition(all 500ms)
+	&.is-animated
+		.watchdog__pict
+			+transform(scale(1))
+			+opacity(1)
+			+transform(translate(-200px, -200px))
+.tower-clocks
+	&__img
+		font-size: 0
+		img
+			width: 100%
+.cnc			 			
+	.slider__item
+		height: 700px
+		background: #a2efef
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle
+.led, .basepro
+	&__img
+		height: 700px
+		background: #000
+		font-size: 0
+		text-align: center
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%
+.basepro						 			  
+	&__img
+		background: #ffd101 			
+			 
+			 							  				 						 			 			 	 							 		  													  		    			 	

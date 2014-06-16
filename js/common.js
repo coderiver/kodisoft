@@ -1,20 +1,16 @@
 head.ready(function() {
 
 // cycle init
-
-	$(".js-slider").cycle({
-		slides: '> div',
-		pager: '.slider__pager'
+	
+	$(".js-slider").each(function(){
+		var pager = $(this).next('.slider__pager');
+		$(this).cycle({
+			slides: '> div',
+			pager: pager
+		});
 	});
 
 // scroll slider 
-	
-	// function scroll_height(){
-		// var height = $(window).outerHeight();
-		// var item = $('.js-scroll-item');
-		// item.css('height', height);
-	// }
-	// scroll_height();
 
 	function scroll_slider(){
 		var slider = $(".js-scroll");
@@ -36,7 +32,10 @@ head.ready(function() {
 
 		});
 	}
-	scroll_slider();
+	if ($(".js-scroll").length) {
+    	scroll_slider();;
+    };
+	
 
 	function scroll_nav(){
 		$('.js-scroll-item').each(function(){
@@ -51,7 +50,9 @@ head.ready(function() {
 			}
 		});
 	}
-	scroll_nav();
+	if ($(".js-scroll").length) {
+    	scroll_nav();
+    };
 
 	function scroll_nav_fixed(){
         var nav = $(".js-scroll");
@@ -63,17 +64,50 @@ head.ready(function() {
             $(".js-scroll-nav").removeClass('is-fixed');
         };
     };
-    scroll_nav_fixed();
+    if ($(".js-scroll").length) {
+    	scroll_nav_fixed();
+    };
+   
+// intellect house icons animation
 
+	function anim1(){
+		var item = $(".inthouse__icons");
+		var top = item.offset().top;
+		if ($(window).scrollTop() > (top - 400)) {
+			item.addClass('is-animated');
+		}
+	}
+	if ($(".inthouse__icons").length) {
+    	anim1();
+    };
+
+    function anim2(){
+		var item = $(".watchdog");
+		var top = item.offset().top;
+		if ($(window).scrollTop() > (top - 400)) {
+			item.addClass('is-animated');
+		}
+	}
+	if ($(".watchdog").length) {
+    	anim2();
+    };
 
 // document scroll
 
 	$(window).scroll(function(){
-		scroll_nav();
-		scroll_nav_fixed();
+		if ($(".js-scroll").length) {
+			scroll_nav();
+    		scroll_nav_fixed();
+    	};
+    	if ($(".inthouse__icons").length) {
+    		anim1();
+    	};
+    	if ($(".watchdog").length) {
+    		anim2();
+    	};
 	});
 	$(window).resize(function(){
-		// scroll_height();
+		
 	});
 
 // document click

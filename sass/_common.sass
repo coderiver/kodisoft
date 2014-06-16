@@ -186,8 +186,9 @@ body
 // btn
 .btn
 	display: inline-block
-	height: 96px
-	width: 390px
+	height: 57px
+	width: 253px
+	margin: 0 19px 
 	background: $green
 	color: #fff
 	+ur
@@ -195,8 +196,63 @@ body
 	+tr(background 200ms)
 	&:hover
 		background: darken($green, 10%)  					
-						
-			 	
-
+	&.btn_gray
+		background: #686969
+		&:hover 					
+			background: darken(#686969, 10%)
+	&.btn_blue
+		background: #00b3f4
+		&:hover 					
+			background: darken(#00b3f4, 10%)
+	&.btn_orange
+		background: #ea5032
+		&:hover
+			background: darken(#ea5032, 10%)
+	&.btn_yellow
+		background: #f5b510
+		&:hover
+			background: darken(#f5b510, 10%)				
+	&.btn_big
+		width: 390px
+		height: 96px
+		
+// scroll nav
+.scroll-nav
+	position: absolute
+	top: 47px
+	right: 22px
+	z-index: 999
+	&__inner
+		text-align: right
+		&.is-fixed
+			position: fixed
+			top: 47px
+			right: 22px
+		li
+			a
+				position: relative
+				font-size: 0px
+				display: block
+				min-height: 18px
+				padding-right: 19px
+				color: $dark
+				text-decoration: none
+				&:before
+					content: ""
+					position: absolute
+					top: 6px
+					right: 2px
+					width: 6px
+					height: 6px
+					background: $dark
+					border-radius: 50%  
+				&.is-active
+					font-size: 13px
+					&:before
+						top: 4px
+						right: 0
+						border: 2px solid $dark
+						background: transparent		 		 			
+	
 
       
