@@ -49,6 +49,7 @@
 // vars
 $dark: #292929
 $green: #73d037
+$blue: #1dbeff
 	
 body
 	min-width: 1158px
@@ -89,7 +90,14 @@ body
 	margin-bottom: 15px
 	font-size: 60px
 	+usb
-	color: $dark	
+	color: $dark
+.title
+	margin-bottom: 100px
+	font-size: 64px
+	+us
+	text-align: center
+	&.title_white
+		color: #fff
 .subtitle
 	margin-bottom: 50px
 	font-size: 56px
@@ -98,7 +106,9 @@ body
 	line-height: 1.2  
 //header
 .header
+	position: relative
 	height: 110px
+	z-index: 2
 .logo
 	padding-top: 29px 
 	a
@@ -211,7 +221,15 @@ body
 	&.btn_yellow
 		background: #f5b510
 		&:hover
-			background: darken(#f5b510, 10%)				
+			background: darken(#f5b510, 10%)
+	&.btn_darkblue
+		background: #2e99ec
+		&:hover
+			background: darken(#2e99ec, 10%)
+	&.btn_darkgray
+		background: #343434
+		&:hover
+			background: darken(#343434, 10%) 		 						
 	&.btn_big
 		width: 390px
 		height: 96px
