@@ -116,7 +116,7 @@ body
 		display: inline-block
 		padding-left: 75px
 		font-size: 26px
-		color: #000
+		color: $dark
 		+usb
 		text-decoration: none
 		&:before
@@ -127,7 +127,10 @@ body
 			+s(logo-green)
 		.laboratory-page &
 			&:before
-				+s(logo-blue)	
+				+s(logo-blue)
+		.product-page &
+			&:before
+				+s(logo-dark)			
 .nav
 	text-align: right
 	&__list
@@ -149,6 +152,9 @@ body
 			.laboratory-page &
 				&.is-active
 					color: #00d1fe
+			.product-page &
+				&.is-active
+							
 
 // footer
 .footer
