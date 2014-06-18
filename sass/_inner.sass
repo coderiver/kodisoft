@@ -65,6 +65,9 @@
 	color: $dark
 	+tr(color 200ms)
 	+usb
+.date
+	font-size: 17px
+	color: #878787	
 .news__text
 	font-size: 18px	
 .news__more 
@@ -819,8 +822,51 @@
 		margin-bottom: 15px
 	&__text
 		font-size: 14px
-		line-height: 1.6  			 	
-			
+		line-height: 1.6
+		
+// article
+.article
+	&__topper
+		height: 630px
+		margin-bottom: 20px
+		background: #ffd101
+		text-align: center
+		vertical-align: middle
+		font-size: 0
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle
+	&__content
+		width: 800px
+		margin: 0 auto 60px
+		p
+			margin-bottom: 40px
+			font-size: 26px   		
+	&__title
+		text-align: center
+		font-size: 64px
+		+usb
+		margin-bottom: 40px
+	.date
+		text-align: center
+	&__share
+		text-align: center
+		font-size: 0
+		li
+			display: inline-block
+			margin: 0 22px 		 			  		  			 	
+.twitter
+	display: block
+	+s(tw2)
+.facebook
+	display: block
+	+s(fb2)				
 					 			   	 
 			 
 			 							  				 						 			 			 	 							 		  													  		    			 	
