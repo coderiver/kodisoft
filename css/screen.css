@@ -209,8 +209,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .products__item .slider__pager span { width: 13px; height: 13px; background: rgba(41, 41, 41, 0.5); }
 .products__item .slider__pager span.cycle-pager-active { background: white; }
 
-.restaurant__img { position: relative; background: #e6e6e6 url(../img/restaurant.jpg) 50% 50%; text-align: center; font-size: 0; }
-.restaurant__img img { max-width: 100%; }
+.restaurant__img { position: relative; height: 558px; background: #e6e6e6 url(../img/restaurant.jpg) 50% 50% no-repeat; text-align: center; font-size: 0; }
 
 .kocloud__img { font-size: 0; background: #62d9ff; text-align: center; }
 .kocloud__img img { max-width: 100%; }
