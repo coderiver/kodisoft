@@ -101,6 +101,14 @@ head.ready(function() {
     	anim2();
     };
 
+// people
+	
+	function people(){
+		var h = $(".js-people").outerHeight();
+		$(".occupation").css('height', h);
+	}
+	people();
+
 // document scroll
 
 	$(window).scroll(function(){
@@ -117,6 +125,7 @@ head.ready(function() {
 	});
 	$(window).resize(function(){
 		MapSize();
+		people();
 	});
 
 // document click

@@ -446,3 +446,9 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .history__inner { height: 100%; background: url(../img/error.png) 90% 100% no-repeat; }
 .history__inner .btn { width: 205px; font-size: 14px; margin: 0; }
 .history__title { margin-bottom: 50px; padding-top: 120px; font-size: 96px; line-height: 1; font-family: "unit_slab_offc_probold", arial, sans-serif; }
+
+.people { font-size: 0; margin-bottom: 85px; }
+.people__item { display: inline-block; vertical-align: top; width: 16.666%; font-size: 0; background: #f02e39; }
+.people__item img { width: 100%; height: 100%; }
+
+.occupation { padding: 30px; color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 33px; font-family: "unit_slab_offc_proregular", arial, sans-serif; }
