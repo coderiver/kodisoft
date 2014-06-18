@@ -412,9 +412,9 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .capabilities__title { font-size: 28px; font-family: "unit_slab_offc_probold", arial, sans-serif; margin-bottom: 15px; }
 .capabilities__text { font-size: 14px; line-height: 1.6; }
 
-.article__topper { height: 630px; margin-bottom: 20px; background: #ffd101; text-align: center; vertical-align: middle; font-size: 0; }
+.article__topper { margin-bottom: 20px; background: #ffd101; text-align: center; vertical-align: middle; font-size: 0; }
 .article__topper:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
-.article__topper img { display: inline-block; vertical-align: middle; }
+.article__topper img { display: inline-block; vertical-align: middle; width: 100%; max-width: 100%; }
 .article__content { width: 800px; margin: 0 auto 60px; }
 .article__content p { margin-bottom: 40px; font-size: 26px; }
 .article__title { text-align: center; font-size: 64px; font-family: "unit_slab_offc_probold", arial, sans-serif; margin-bottom: 40px; }
