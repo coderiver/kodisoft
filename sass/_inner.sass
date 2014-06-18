@@ -136,6 +136,11 @@
 		margin: 0 auto
 		color: #fff
 		font-size: 27px
+	&.about_vacancy
+		margin-top: 75px
+		margin-bottom: 100px
+		background: url(../img/vacancy.jpg) 50% 0 no-repeat
+		+cover	
 		
 // r&d
 .rd-text
@@ -934,6 +939,25 @@
 	+box
 	font-size: 33px
 	+us
+
+// vacancy
+.vacancy 
+	&__item
+		display: block
+		margin-bottom: 65px
+		text-decoration: none
+		&:hover
+			.vacancy__title
+				color: $green 
+	&__img
+		margin-bottom: 20px
+		font-size: 0
+	&__title
+		font-size: 28px
+		color: $dark
+		+usb
+		+transition(color 200ms)
+		 	
 
 			 
 			 							  				 						 			 			 	 							 		  													  		    			 	

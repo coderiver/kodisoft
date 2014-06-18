@@ -109,8 +109,8 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .row { *zoom: 1; margin-left: -18px; }
 .row:after { content: " "; display: table; clear: both; }
-.row.row_news { font-size: 0; }
-.row.row_news .col3, .row.row_news .col6 { float: none; display: inline-block; vertical-align: top; }
+.row.row_inline { font-size: 0; }
+.row.row_inline .col3, .row.row_inline .col6 { float: none; display: inline-block; vertical-align: top; }
 
 .col1 { float: left; width: 80px; margin-left: 18px; }
 
@@ -181,6 +181,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .about { height: 395px; margin-bottom: 50px; background: url(../img/about.jpg) 50% 0 no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .about__inner { padding-top: 80px; width: 768px; margin: 0 auto; color: white; font-size: 27px; }
+.about.about_vacancy { margin-top: 75px; margin-bottom: 100px; background: url(../img/vacancy.jpg) 50% 0 no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 .rd-text p { margin-bottom: 50px; font-family: "unit_slab_offc_proregular", arial, sans-serif; font-size: 40px; color: #292929; line-height: 1.2; }
 .rd-text p b { font-family: "unit_slab_offc_probold", arial, sans-serif; }
@@ -452,3 +453,8 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .people__item img { width: 100%; height: 100%; }
 
 .occupation { padding: 30px; color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 33px; font-family: "unit_slab_offc_proregular", arial, sans-serif; }
+
+.vacancy__item { display: block; margin-bottom: 65px; text-decoration: none; }
+.vacancy__item:hover .vacancy__title { color: #73d037; }
+.vacancy__img { margin-bottom: 20px; font-size: 0; }
+.vacancy__title { font-size: 28px; color: #292929; font-family: "unit_slab_offc_probold", arial, sans-serif; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
