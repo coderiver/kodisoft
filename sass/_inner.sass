@@ -870,7 +870,33 @@
 	+s(tw2)
 .facebook
 	display: block
-	+s(fb2)				
-					 			   	 
+	+s(fb2)
+
+// contacts
+.contacts
+	position: relative					
+	&__popup
+		position: absolute
+		top: 80px
+		left: 50%
+		margin-left: -580px
+		width: 295px
+		padding: 40px 
+		background: #fff
+		z-index: 2
+	&__inner
+		font-size: 26px
+		a
+			color: #fe1922
+			text-decoration: none
+			+transition(color 200ms)
+			&:hover
+				color: darken(#fe1922, 10%)	  
+.map
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0 				 			   	 
 			 
 			 							  				 						 			 			 	 							 		  													  		    			 	

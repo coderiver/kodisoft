@@ -86,11 +86,13 @@ body
 .push
 	height: 90px
 // titles
-.h1
+.h1, .h2
 	margin-bottom: 15px
 	font-size: 60px
 	+usb
 	color: $dark
+.h2
+	font-size: 42px	
 .title
 	margin-bottom: 100px
 	font-size: 64px
@@ -136,7 +138,10 @@ body
 		.white-page &
 			color: #fff
 			&:before
-				+s(logo-white)					
+				+s(logo-white)
+		.contacts-page &
+			&:before
+				+s(logo-red)							
 .nav
 	text-align: right
 	&__list
@@ -161,7 +166,10 @@ body
 			.product-page &
 				&.is-active
 			.white-page &
-				color: #fff		
+				color: #fff
+			.contacts-page &
+				&.is-active
+					color: #f14047			
 							
 
 // footer

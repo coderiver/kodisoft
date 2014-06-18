@@ -10,6 +10,15 @@ head.ready(function() {
 		});
 	});
 
+// contacts map size
+
+	function MapSize(){
+		var h = $(window).outerHeight();
+		h = (h - 200);
+		$(".js-contacts").css('height', h);
+	}
+	MapSize();
+
 // scroll slider 
 
 	function scroll_slider(){
@@ -107,7 +116,7 @@ head.ready(function() {
     	};
 	});
 	$(window).resize(function(){
-		
+		MapSize();
 	});
 
 // document click

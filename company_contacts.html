@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>company_contacts</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=abcdefg" type="text/javascript"></script>
+	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+
+<!-- BEGIN  out-->
+<div class="out contacts-page">
+	<!-- BEGIN header -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col2">
+					<h1 class="logo"><a href="#">kodisoft</a></h1>
+				</div>
+				<div class="col10">
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__link">
+								<a href="#">activities</a>
+							</li>
+							<li class="nav__link">
+								<a href="#">products</a>
+							</li>
+							<li class="nav__link">
+								<a href="#">laboratory</a>
+							</li>
+							<li class="nav__link">
+								<a href="#" class="is-active">company</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- END header -->
+	<div class="contacts js-contacts">
+		<div class="contacts__popup">
+			<h2 class="h2">Main office</h2>
+			<div class="contacts__inner">
+				<p>Ukraine, Kiev,</p> 
+				<p>Pobedy, 5, office 8</p>
+				<p>Tel.: +3 8050 888 93 80</p>
+				<p><a href="mailto:support@kodisoft.com">support@kodisoft.com</a></p>
+			</div>
+		</div>
+		<div class="map" id="map-canvas"></div>
+			<script>
+			  	function initialize() {
+				    var mapOptions = {
+				      	zoom: 12,
+				      	center: new google.maps.LatLng(50.447378,30.486993),
+				      	disableDefaultUI: true,
+				      	scrollwheel: true,
+				     	zoomControl: true,
+				    	mapTypeControlOptions: {
+    					    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'tehgrayz']
+    					}
+				    }
+				    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+				    var myLatLng1 = new google.maps.LatLng(50.447378,30.486993);
+				    var marker1 = new google.maps.Marker({
+					      position: myLatLng1,
+					      map: map,
+					      title: 'Ukraine, Kiev, Pobedy, 5, office 8'
+					});
+
+				}
+			  	// Asynchronous Loading
+				function loadScript() {
+				  var script = document.createElement('script');
+				  script.type = 'text/javascript';
+				  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+				      'callback=initialize';
+				  document.body.appendChild(script);
+				}
+				window.onload = loadScript;
+			</script>
+	</div>
+	<!-- BEGIN footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col6">
+					<div class="copyrights">© Kodisoft 2013   |   All rights reserved</div>
+					<div class="socials">
+						<ul class="socials__list">
+							<li><a href="#" class="tw"></a></li>
+							<li><a href="#" class="fb"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col6">
+					<ul class="footer__menu">
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Jobs</a></li>
+						<li><a href="#">Legal Notice</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END footer -->
+</div>
+<!-- END out-->
+
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>
