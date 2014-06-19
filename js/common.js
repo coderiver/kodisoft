@@ -2,14 +2,24 @@ head.ready(function() {
 
 // cycle init
 	
-	$(".js-slider").each(function(){
-		var pager = $(this).next('.slider__pager');
-		$(this).cycle({
-			slides: '> div',
-			pager: pager
+	
+	function SliderInit(){
+		$(".js-slider").each(function(){
+			var pager = $(this).next('.slider__pager');
+			var top = $(this).offset().top;
+			$(this).cycle({
+				slides: '> div',
+				pager: pager,
+				paused: true
+			});
+			if ($(window).scrollTop() >= (top - 140)) {
+				$(this).cycle('resume');
+			}
 		});
-	});
-
+	}
+	if ($(".js-slider").length) {
+    	SliderInit();
+    };
 // contacts map size
 
 	function MapSize(){
@@ -152,6 +162,9 @@ head.ready(function() {
     	};
     	if ($(".watchdog").length) {
     		anim2();
+    	};
+    	if ($(".js-slider").length) {
+    		SliderInit();
     	};
 	});
 	$(window).resize(function(){

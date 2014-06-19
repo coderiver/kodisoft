@@ -83,6 +83,36 @@ body
 	height: auto !important
 	height: 100%
 	margin: 0 auto -90px
+	&.index-page
+		*
+			&::selection
+				color: #fff
+				background: #81c200
+	&.laboratory-page
+		*
+			&::selection
+				color: #fff
+				background: #00d1fe
+	&.product-page
+		*
+			&::selection
+				color: #fff
+				background: #292929
+	&.product-page
+		*
+			&::selection
+				color: #fff
+				background: #292929
+	&.contacts-page	
+		*
+			&::selection
+				color: #fff
+				background: #f14047
+	&.history-page	
+		*
+			&::selection
+				color: #fff
+				background: #ebbe07														 
 .push
 	height: 90px
 // titles
@@ -112,16 +142,17 @@ body
 .header
 	position: relative
 	height: 110px
+	margin-bottom: 30px
 	z-index: 2
 .logo
-	padding-top: 29px 
+	padding-top: 30px 
 	a
 		position: relative
 		display: inline-block
 		padding-left: 75px
 		font-size: 26px
 		color: $dark
-		+usb
+		+us
 		text-decoration: none
 		&:before
 			content: ""
@@ -160,7 +191,7 @@ body
 			text-decoration: none
 			+tr(color 200ms)
 			&:hover
-				color: #666
+				color: #8f8e8e
 			&.is-active
 				color: $green
 			.laboratory-page &

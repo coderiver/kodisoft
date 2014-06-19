@@ -2,13 +2,15 @@
 
 // slider
 .slider
+	+nosel
 	&__item
 		position: relative
 		width: 100% 
-		max-height: 595px
+		height: 600px
 		overflow: hidden
 		img
-			width: 100%
+			min-width: 100%
+			height: 100%
 		.product-wrap &
 			text-align: center
 			img
@@ -52,15 +54,15 @@
 	color: $dark
 	margin-bottom: 70px
 	&:hover
-		.news__title
-			color: #73d037
+		.news__title, .news__text
+			color: #73d037	
 .news__img
 	font-size: 0
 	margin-bottom: 24px 
 	img
 		width: 100% 
 .news__title
-	margin-bottom: 15px
+	margin-bottom: 8px
 	font-size: 24px 
 	color: $dark
 	+tr(color 200ms)
@@ -69,7 +71,8 @@
 	font-size: 17px
 	color: #878787	
 .news__text
-	font-size: 18px	
+	font-size: 16px
+	+tr(color 200ms)	
 .news__more 
 	text-align: center
 	margin-bottom: 70px
@@ -121,7 +124,8 @@
 	&__title
 		margin-bottom: 25px
 		+usb
-		font-size: 38px
+		font-size: 34px
+		line-height: 1.2
 		color: $dark	
 	&__text
 		font-size: 18px
@@ -484,13 +488,13 @@
 	0%, 100%
 		+transform(translate(0px, 0px))
 	20%
-		+transform(translate(5px, 5px))
+		+transform(translate(-10px, -5px))
 	40%
-		+transform(translate(0px, 5px))
+		+transform(translate(-15px, -10px))
 	60%
-		+transform(translate(5px, 10px))
+		+transform(translate(-10px, -15px))
 	80%
-		+transform(translate(5px, 5px))        			
+		+transform(translate(-5px, -10px))       			
 .parallax
 	position: absolute
 	top: 0
@@ -790,8 +794,16 @@
 			color: $blue
 .product-wrap
 	position: relative
-	top: -109px
+	top: -140px
 	z-index: 1
+	.kolight__img
+		max-height: 690px
+		overflow: hidden
+	.slider__item
+		height: 690px
+		max-height: 690px
+	.products__title
+		font-size: 96px	 	
 .product
 	padding: 20px 0 0
 	&__title
@@ -1099,6 +1111,7 @@
 	&__topper
 		margin-bottom: 20px
 		background: #ffd101
+		height: 630px
 		text-align: center
 		vertical-align: middle
 		font-size: 0
@@ -1111,8 +1124,17 @@
 		img
 			display: inline-block
 			vertical-align: middle
-			width: 100%
-			max-width: 100% 
+	&.article_wideimg
+		.article__topper
+			height: 517px
+			overflow: hidden
+			&:before
+				display: none 
+			img
+				display: block
+				min-width: 100%
+				
+				height: 100%  		 
 	&__content
 		width: 800px
 		margin: 0 auto 60px
@@ -1122,6 +1144,7 @@
 	&__title
 		text-align: center
 		font-size: 64px
+		line-height: 1.2
 		+usb
 		margin-bottom: 40px
 	.date
@@ -1135,9 +1158,13 @@
 .twitter
 	display: block
 	+s(tw2)
+	&:hover
+		+s(tw2-h)
 .facebook
 	display: block
 	+s(fb2)
+	&:hover
+		+s(fb2-h)
 
 // contacts
 .contacts
