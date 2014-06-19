@@ -115,6 +115,29 @@ head.ready(function() {
 			$(this).find('.hint').toggleClass('is-open');
 		});	
 	};
+
+// parallax 
+
+	$(".parallax__layer1").parallax(
+        {
+            xparallax: '30px',
+            yparallax: '20px',
+            width: 1,
+            height: 1,
+            mouseport: jQuery(".mcloud__img")
+        }
+    );
+    $(".parallax__layer2").parallax(
+        {
+            xparallax: '20px',
+            yparallax: '10px',
+            width: 1,
+            height: 1,
+            invertX: false,
+            invertY: false,
+            mouseport: jQuery(".mcloud__img")
+        }
+    );	
 	
 
 // document scroll
