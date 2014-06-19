@@ -109,6 +109,14 @@ head.ready(function() {
 	}
 	people();
 
+// hint
+	if ($(".hint").length) {
+		$(".restaurant__point").on('click', function(){
+			$(this).find('.hint').toggleClass('is-open');
+		});	
+	};
+	
+
 // document scroll
 
 	$(window).scroll(function(){

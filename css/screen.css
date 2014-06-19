@@ -210,6 +210,67 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .products__item .slider__pager span.cycle-pager-active { background: white; }
 
 .restaurant__img { position: relative; height: 558px; background: #e6e6e6 url(../img/restaurant.jpg) 50% 50% no-repeat; text-align: center; font-size: 0; }
+.restaurant__point { position: absolute; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; }
+.restaurant__point:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.restaurant__point img { cursor: pointer; }
+.restaurant__point.wall { top: 121px; left: 50%; margin-left: 145px; z-index: 1; }
+.restaurant__point.wall .hint { bottom: 80px; left: 30px; width: 185px; height: 22px; }
+.restaurant__point.wall .hint.is-open { width: 390px; height: 106px; }
+.restaurant__point.wall .hint.is-open .hint__text { height: 48px; }
+.restaurant__point.wall .hint.is-open .hint__link { height: 16px; }
+.restaurant__point.terminal { top: 176px; left: 50%; margin-left: 393px; z-index: 2; }
+.restaurant__point.terminal .hint { bottom: 65px; left: -75px; width: 185px; height: 22px; }
+.restaurant__point.terminal .hint.is-open { width: 220px; height: 106px; }
+.restaurant__point.terminal .hint.is-open .hint__text { height: 48px; }
+.restaurant__point.terminal .hint.is-open .hint__link { height: 16px; }
+.restaurant__point.bar { top: 121px; left: 50%; margin-left: -190px; z-index: 1; }
+.restaurant__point.bar .hint { bottom: 25px; left: 34px; width: 185px; height: 22px; }
+.restaurant__point.bar .hint.is-open { width: 390px; height: 80px; }
+.restaurant__point.bar .hint.is-open .hint__text { height: 33px; }
+.restaurant__point.bar .hint.is-open .hint__link { height: 16px; }
+.restaurant__point.pos-terminal { top: 185px; left: 50%; margin-left: 64px; z-index: 1; }
+.restaurant__point.pos-terminal .hint { bottom: 54px; left: -87px; width: 185px; height: 22px; }
+.restaurant__point.pos-terminal .hint.is-open { width: 390px; height: 80px; }
+.restaurant__point.pos-terminal .hint.is-open .hint__text { height: 33px; }
+.restaurant__point.pos-terminal .hint.is-open .hint__link { height: 16px; }
+.restaurant__point.partition { top: -15px; left: 50%; margin-left: -601px; z-index: 2; }
+.restaurant__point.partition .hint { bottom: 250px; left: 22px; width: 185px; height: 22px; }
+.restaurant__point.partition .hint.is-open { width: 390px; height: 73px; }
+.restaurant__point.partition .hint.is-open .hint__text { height: 32px; }
+.restaurant__point.partition .hint.is-open .hint__link { height: 16px; }
+.restaurant__point.table1 { top: 279px; left: 50%; margin-left: -183px; z-index: 2; }
+.restaurant__point.table1 .hint { bottom: 60px; left: 22px; width: 185px; height: 22px; }
+.restaurant__point.table1 .hint.is-open { width: 390px; height: 73px; }
+.restaurant__point.table1 .hint.is-open .hint__text { height: 32px; }
+.restaurant__point.table1 .hint.is-open .hint__link { height: 16px; }
+.restaurant__point.table2 { top: 237px; left: 50%; margin-left: 134px; z-index: 2; }
+.restaurant__point.table2 .hint { bottom: 40px; left: 22px; width: 185px; height: 22px; }
+.restaurant__point.table2 .hint.is-open { width: 390px; height: 73px; }
+.restaurant__point.table2 .hint.is-open .hint__text { height: 32px; }
+.restaurant__point.table2 .hint.is-open .hint__link { height: 16px; }
+.restaurant__point.table3 { top: 243px; left: 50%; margin-left: -587px; z-index: 2; }
+.restaurant__point.table3 .hint { bottom: 40px; left: 22px; width: 185px; height: 22px; }
+.restaurant__point.table3 .hint.is-open { width: 390px; height: 73px; }
+.restaurant__point.table3 .hint.is-open .hint__text { height: 32px; }
+.restaurant__point.table3 .hint.is-open .hint__link { height: 16px; }
+.restaurant__point.floor1 { top: 328px; left: 50%; margin-left: -620px; z-index: 2; }
+.restaurant__point.floor1 .hint { bottom: 97px; left: 125px; width: 185px; height: 22px; }
+.restaurant__point.floor1 .hint.is-open { width: 390px; height: 73px; }
+.restaurant__point.floor1 .hint.is-open .hint__text { height: 32px; }
+.restaurant__point.floor1 .hint.is-open .hint__link { height: 16px; }
+.restaurant__point.floor2 { top: 330px; left: 50%; margin-left: -24px; z-index: 2; }
+.restaurant__point.floor2 .hint { bottom: 97px; left: 125px; width: 185px; height: 22px; }
+.restaurant__point.floor2 .hint.is-open { width: 390px; height: 73px; }
+.restaurant__point.floor2 .hint.is-open .hint__text { height: 32px; }
+.restaurant__point.floor2 .hint.is-open .hint__link { height: 16px; }
+
+.hint { position: absolute; font-size: 12px; color: white; padding: 7px 13px; text-align: left; background: black; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; }
+.hint:before { content: ""; position: absolute; bottom: -8px; left: 112px; width: 0px; height: 0px; border-style: solid; border-width: 8px 6.5px 0 6.5px; border-color: black transparent transparent transparent; }
+.hint__title { text-align: center; font-size: 14px; }
+.hint__text { overflow: hidden; height: 0; margin-bottom: 5px; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
+.hint__link { display: inline-block; overflow: hidden; height: 0; color: #45c3f3; text-decoration: none; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
+.hint.is-open { cursor: default; }
+.hint.is-open .hint__title { text-align: left; }
 
 .kocloud__img { font-size: 0; background: #62d9ff; text-align: center; }
 .kocloud__img img { max-width: 100%; }
