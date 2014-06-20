@@ -351,7 +351,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .avimir .slider__item { background: #ea5032; height: 700px; }
 .avimir .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
-.avimir .slider__item img { display: inline-block; vertical-align: middle; }
+.avimir .slider__item img { display: inline-block; vertical-align: middle; height: auto; min-width: 1px; }
 
 .kolight__img { font-size: 0; background: #ffcb27; text-align: center; }
 .kolight__img img { max-width: 100%; }
@@ -517,7 +517,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .software { padding-top: 60px; background: #00cbeb; }
 .software .slider-wrap { margin-bottom: 70px; }
 .software .slider__item { text-align: center; }
-.software .slider__item img { width: auto; max-width: 100%; }
+.software .slider__item img { width: auto; max-width: 100%; min-width: 1px; }
 .software .slider__pager span { background: white; }
 .software .slider__pager span.cycle-pager-active { background: black; }
 .software__options { position: relative; font-size: 0; margin-left: -18px; }

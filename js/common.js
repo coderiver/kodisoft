@@ -215,7 +215,6 @@ head.ready(function() {
 				        	});
 				        }
 				        else{
-				        	event.preventDefault();
 				        	b.removeClass('slider-mode ');
 				        }
 				    }
