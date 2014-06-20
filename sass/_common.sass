@@ -112,9 +112,15 @@ body
 		*
 			&::selection
 				color: #fff
-				background: #ebbe07														 
+				background: #ebbe07
+	&.vacancy-page	
+		*
+			&::selection
+				color: #fff
+				background: #73d037																		 
 .push
 	height: 90px
+
 // titles
 .h1, .h2
 	margin-bottom: 15px
@@ -175,7 +181,10 @@ body
 				+s(logo-red)
 		.history-page &
 			&:before
-				+s(logo-yellow)									
+				+s(logo-yellow)
+		.vacancy-page &
+			&:before
+				+s(logo-lightgreen)											
 .nav
 	text-align: right
 	&__list
@@ -322,9 +331,11 @@ body
 					width: 6px
 					height: 6px
 					background: $dark
-					border-radius: 50%  
+					border-radius: 50%
+				&:hover
+					font-size: 13px	  
 				&.is-active
-					font-size: 13px
+					//font-size: 13px
 					&:before
 						top: 4px
 						right: 0
