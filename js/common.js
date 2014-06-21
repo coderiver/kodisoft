@@ -15,7 +15,11 @@ head.ready(function() {
 			if ($(window).scrollTop() >= (top - 140)) {
 				$(this).cycle('resume');
 			}
+			if ($(window).scrollTop() >= (top + 800)) {
+				$(this).cycle('goto', 0);
+			}
 		});
+		//.cycle('goto', 0);
 	}
 	if ($(".js-slider").length) {
     	SliderInit();
