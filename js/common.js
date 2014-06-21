@@ -30,7 +30,7 @@ head.ready(function() {
 	}
 	MapSize();
 
-// scroll slider 
+	// scroll slider 
 
 	function scroll_slider(){
 		var slider = $(".js-scroll");
@@ -52,7 +52,7 @@ head.ready(function() {
 
 		});
 	}
-	if ($(".js-scroll").length) {
+	if ($(".js-scroll").length && !$('.js-scroll-rd').length) {
     	scroll_slider();
     };
 	
@@ -77,7 +77,7 @@ head.ready(function() {
 	function scroll_nav_fixed(){
         var nav = $(".js-scroll");
         var top = nav.offset().top;
-        if ($(window).scrollTop() >= top) {
+        if ($(window).scrollTop() >= top -47) {
             $(".js-scroll-nav").addClass('is-fixed');
         }
         else{
@@ -152,94 +152,150 @@ head.ready(function() {
 
 
 // rd slider
+	var b = $('body');
+	var item = $(".rd__item");
+	var top = $(".rd").offset().top;
+	var h = $(window).outerHeight();
+	item.css('height', h);
+	item.first().addClass('is-animated');
+	$('.scroll-nav__inner a').click(function (e){
+		e.preventDefault();
 
-	function rd_slider(){
-		var top = $(".rd").offset().top;
-		var item = $(".rd__item");
-		var h = $(window).outerHeight();
-		var scroll_top = $(window).scrollTop();
-		var b = $('body');
+		var page = $(this).attr("href");
 
-		function sliderScroll(){
-			$('.rd__item').each(function(){
-				var pos = $(this).offset().top;
-				var id = $(this).attr('id');
-				if( $(window).scrollTop() == (pos)){
-					$('.rd__item').removeClass('is-animated');
-					$(this).addClass('is-animated');
-					$('.scroll-nav__inner a').removeClass('is-active');
-					$('[href = #'+id+']').addClass('is-active');
-				}
-			});
+		$('html, body').stop().animate({
+			scrollTop: $(page).offset().top
+		}, 800);
+	});
+
+
+	$(window).scroll(function(event) {
+		if ($(window).scrollTop() >= top ){
+			$('body').addClass('slider-mode');
 		}
-		$(window).scroll(function() {
-			sliderScroll();
-		});
+	});
+	$('.scroll-nav__inner li:first-child').addClass('is-first');
+	$('.scroll-nav__inner li:last-child').addClass('is-last');
 
-		// slider paginator
-		$('.scroll-nav__inner a').click(function (e){
-			e.preventDefault();
-
-			var page = $(this).attr("href");
-
-			$('html, body').stop().animate({
-				scrollTop: $(page).offset().top
-			}, 800);
-		});
-
-		item.css('height', h);
-		item.first().addClass('is-animated');
-
-		if (scroll_top >= top ) {
-			$("body").addClass('slider-mode');
-			var $current, flag = false;
-
-				$('body.slider-mode').bind('mousewheel', function(event) {
-					if (b.hasClass('is-running')) { 
-						return false; 
-					}
-
-					b.addClass('is-running');
-
-					var current = $(".rd__item.is-animated")
-
-				    if (event.originalEvent.wheelDelta >= 0) {
-				        var prev = current.prev();
-
-				        if (prev.length) {
-				        	flag = true;
-				        	$('body').scrollTo(prev, 500, {
-				        		onAfter : function(){
-				        			flag = false;
-				        		}
-				        	});
-				        }
-				        else{
-				        	b.removeClass('slider-mode ');
-				        }
-				    }
-				    else {
-				        var next = current.next();
-
-				        if (next.length) {
-				        	flag = true;
-				        	$('body').scrollTo(next, 500, {
-				        		onAfter : function(){
-				        			flag = false;
-				        		}
-				        	});
-				        }
-				    }
-				    setTimeout(function(){b.removeClass('is-running');},500);
-					event.preventDefault();
-				});
+	function goto(myid){
+		console.log('scrolling to '+myid);
+		toscroll = myid+'';
+		
+		if(!b.hasClass('is-running')){
+			b.addClass('is-running');
+			$('body').scrollTo($(''+toscroll), 1000, {
+	    		onAfter : function(){
+	    			b.removeClass('is-running');
+	    			$('.scroll-nav__inner a').removeClass('is-active');
+	    			$('.scroll-nav__inner a[href='+toscroll+']').addClass('is-active');
+	    		}
+	    	});
+		}
+		
+	}
+	function next(){
+		console.log('next')
+		if($('.scroll-nav__inner .is-active').parent().hasClass('is-last')){
+			$('body').removeClass('slider-mode');
 		}
 		else{
-			$("body").removeClass('slider-mode');
+			mynext = $('.scroll-nav__inner .is-active').parent().next().children('a').attr('href');
+			goto(mynext);
 		}
+	}
+	function prev(){
+		console.log('prev');
+		if($('.scroll-nav__inner .is-active').parent().hasClass('is-first')){
+			$('body').removeClass('slider-mode');
+		}
+		else{
+			myprev = $('.scroll-nav__inner .is-active').parent().prev().children('a').attr('href');
+			goto(myprev);
+		}
+	}
+	$('.scroll-nav__inner a').click(function(event) {
+		goto($(this).attr('href'));
+		return false;
+	});
+	var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
+	$('body').bind(mousewheelevt, function(e){
+		if(b.hasClass('slider-mode')){
+		    var evt = window.event || e //equalize event object     
+		    evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+		    var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+
+		    if(delta > 0) {
+		        prev();
+		    }
+		    else{
+		        next();
+
+		    }   
+		    return false;
+		}
+		else{
+			console.log('we are free to scroll');
+		}
+	});
+
+	function rd_slider(){
+		
+		// var scroll_top = $(window).scrollTop();
+		
+
+		// if (scroll_top >= top ) {
+		// 	$("body").addClass('slider-mode');
+		// 	var $current, flag = false;
+
+		// 		$('body.slider-mode').bind('mousewheel', function(event) {
+		// 			if (b.hasClass('is-running')) { 
+		// 				return false; 
+		// 			}
+
+		// 			b.addClass('is-running');
+
+		// 			var current = $(".rd__item.is-animated")
+
+		// 		    if (event.originalEvent.wheelDelta >= 0) {
+		// 		        var prev = current.prev();
+
+		// 		        if (prev.length) {
+		// 		        	flag = true;
+		// 		        	$('body').scrollTo(prev, 500, {
+		// 		        		onAfter : function(){
+		// 		        			flag = false;
+		// 		        		}
+		// 		        	});
+		// 		        	event.preventDefault();
+		// 		        }
+		// 		        else{
+		// 		        	b.removeClass('slider-mode ');
+		// 		        }
+		// 		    }
+		// 		    else {
+		// 		        var next = current.next();
+
+		// 		        if (next.length) {
+		// 		        	flag = true;
+		// 		        	$('body').scrollTo(next, 500, {
+		// 		        		onAfter : function(){
+		// 		        			flag = false;
+		// 		        		}
+		// 		        	});
+		// 		        }
+
+		// 		    }
+		// 		    setTimeout(function(){b.removeClass('is-running');},500);
+					
+		// 		});
+		// }
+		// else{
+		// 	$("body").removeClass('slider-mode');
+		// }
 		
 
 	}
+	// end rd_slider
 	if ($(".rd").length) {
 		rd_slider();
 	};
