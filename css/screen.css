@@ -364,7 +364,9 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .bookpro .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
 .bookpro .slider__item img { display: inline-block; max-width: 100%; vertical-align: middle; }
 
+.bussinesspro { height: 584px; overflow: hidden; }
 .bussinesspro .slider__item { background: #333741; }
+.bussinesspro .slider__item img { min-width: 1px; }
 
 .portal .slider__item { background: #5ac6ff; height: 700px; }
 .portal .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
