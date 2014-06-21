@@ -357,6 +357,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .kolight__img img { max-width: 100%; }
 
 .idbm .slider__item { position: relative; height: 700px; background: #edf1f6; padding-top: 145px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.idbm .slider__item img { min-width: 1px; }
 .idbm__text { position: absolute; top: 75px; left: 50%; margin-left: -400px; width: 410px; font-size: 28px; text-align: left; }
 
 .bookpro .slider__item { background: #cdf000; height: 700px; }
@@ -371,7 +372,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .medicalpro .slider__item, .prodoffice .slider__item, .doll .slider__item { height: 700px; background: #7aebff; font-size: 0; }
 .medicalpro .slider__item:before, .prodoffice .slider__item:before, .doll .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
-.medicalpro .slider__item img, .prodoffice .slider__item img, .doll .slider__item img { display: inline-block; vertical-align: middle; }
+.medicalpro .slider__item img, .prodoffice .slider__item img, .doll .slider__item img { display: inline-block; vertical-align: middle; min-width: 1px; height: auto; }
 
 .master-test__img { font-size: 0; }
 .master-test__img img { width: 100%; }
@@ -379,6 +380,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .pseudo-weber__img { padding-top: 50px; background: #f2f1ef; text-align: center; font-size: 0; }
 
 .prodoffice .slider__item { background: #f0f3e9; }
+.prodoffice .slider__item img { height: auto; }
 
 .doll .slider__item { background: #f56e97; }
 
@@ -391,7 +393,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .agelma .slider__item { background: #ffd101; height: 700px; text-align: center; font-size: 0; }
 .agelma .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
-.agelma .slider__item img { display: inline-block; vertical-align: middle; }
+.agelma .slider__item img { display: inline-block; vertical-align: middle; min-width: 1px; height: auto; }
 
 .lesexpress .slider__item { background: url(../img/pict9.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 700px; }
 .lesexpress .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
