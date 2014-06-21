@@ -587,12 +587,14 @@
 	.slider__item
 		background: #cdf000
 		height: 700px
-		&:before
-			content: ""
-			display: inline-block
-			width: 0
-			height: 100%
-			vertical-align: middle
+		img
+			min-width: 1px 
+		// &:before
+		// 	content: ""
+		// 	display: inline-block
+		// 	width: 0
+		// 	height: 100%
+		// 	vertical-align: middle
 		img
 			display: inline-block
 			max-width: 100% 
@@ -617,6 +619,8 @@
 		img
 			display: inline-block
 			vertical-align: middle
+			min-width: 1px 
+			height: auto
 .medicalpro, .prodoffice, .doll
 	.slider__item
 		height: 700px
@@ -705,6 +709,8 @@
 		img
 			display: inline-block
 			vertical-align: middle
+			height: auto
+			min-width: 1px 
 .tsm
 	&__img
 		font-size: 0
@@ -799,6 +805,8 @@
 		img
 			display: inline-block
 			vertical-align: middle
+			height: auto 
+			min-width: 1px 
 .led, .basepro
 	&__img
 		height: 700px

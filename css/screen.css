@@ -362,7 +362,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .idbm__text { position: absolute; top: 75px; left: 50%; margin-left: -400px; width: 410px; font-size: 28px; text-align: left; }
 
 .bookpro .slider__item { background: #cdf000; height: 700px; }
-.bookpro .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
+.bookpro .slider__item img { min-width: 1px; }
 .bookpro .slider__item img { display: inline-block; max-width: 100%; vertical-align: middle; }
 
 .bussinesspro { height: 584px; overflow: hidden; }
@@ -371,7 +371,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .portal .slider__item { background: #5ac6ff; height: 700px; }
 .portal .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
-.portal .slider__item img { display: inline-block; vertical-align: middle; }
+.portal .slider__item img { display: inline-block; vertical-align: middle; min-width: 1px; height: auto; }
 
 .medicalpro .slider__item, .prodoffice .slider__item, .doll .slider__item { height: 700px; background: #7aebff; font-size: 0; }
 .medicalpro .slider__item:before, .prodoffice .slider__item:before, .doll .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
@@ -400,7 +400,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .lesexpress .slider__item { background: url(../img/pict9.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 700px; }
 .lesexpress .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
-.lesexpress .slider__item img { display: inline-block; vertical-align: middle; }
+.lesexpress .slider__item img { display: inline-block; vertical-align: middle; height: auto; min-width: 1px; }
 
 .tsm__img { font-size: 0; }
 .tsm__img img { width: 100%; }
@@ -444,7 +444,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .cnc .slider__item { height: 700px; background: #a2efef; }
 .cnc .slider__item:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
-.cnc .slider__item img { display: inline-block; vertical-align: middle; }
+.cnc .slider__item img { display: inline-block; vertical-align: middle; height: auto; min-width: 1px; }
 
 .led__img, .basepro__img { height: 700px; background: black; font-size: 0; text-align: center; }
 .led__img:before, .basepro__img:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
