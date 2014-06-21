@@ -202,6 +202,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .rd-text p b { font-family: "unit_slab_offc_probold", arial, sans-serif; }
 
 .rd { position: relative; }
+.rd .rd__item > div { overflow: hidden; }
 .rd__dreams { position: relative; height: 100%; background: #ffd529; }
 .rd__dreams .rd__title { color: #292929; }
 .rd__restaurant { position: relative; height: 100%; background: #009539; }
