@@ -152,6 +152,7 @@ head.ready(function() {
 
 
 // rd slider
+if($(".rd").length){
 	var b = $('body');
 	var item = $(".rd__item");
 	var top = $(".rd").offset().top;
@@ -238,68 +239,7 @@ head.ready(function() {
 		}
 	});
 
-	function rd_slider(){
-		
-		// var scroll_top = $(window).scrollTop();
-		
-
-		// if (scroll_top >= top ) {
-		// 	$("body").addClass('slider-mode');
-		// 	var $current, flag = false;
-
-		// 		$('body.slider-mode').bind('mousewheel', function(event) {
-		// 			if (b.hasClass('is-running')) { 
-		// 				return false; 
-		// 			}
-
-		// 			b.addClass('is-running');
-
-		// 			var current = $(".rd__item.is-animated")
-
-		// 		    if (event.originalEvent.wheelDelta >= 0) {
-		// 		        var prev = current.prev();
-
-		// 		        if (prev.length) {
-		// 		        	flag = true;
-		// 		        	$('body').scrollTo(prev, 500, {
-		// 		        		onAfter : function(){
-		// 		        			flag = false;
-		// 		        		}
-		// 		        	});
-		// 		        	event.preventDefault();
-		// 		        }
-		// 		        else{
-		// 		        	b.removeClass('slider-mode ');
-		// 		        }
-		// 		    }
-		// 		    else {
-		// 		        var next = current.next();
-
-		// 		        if (next.length) {
-		// 		        	flag = true;
-		// 		        	$('body').scrollTo(next, 500, {
-		// 		        		onAfter : function(){
-		// 		        			flag = false;
-		// 		        		}
-		// 		        	});
-		// 		        }
-
-		// 		    }
-		// 		    setTimeout(function(){b.removeClass('is-running');},500);
-					
-		// 		});
-		// }
-		// else{
-		// 	$("body").removeClass('slider-mode');
-		// }
-		
-
-	}
-	// end rd_slider
-	if ($(".rd").length) {
-		rd_slider();
-	};
-
+}
 // document scroll
 
 	$(window).scroll(function(){
@@ -316,16 +256,11 @@ head.ready(function() {
     	if ($(".js-slider").length) {
     		SliderInit();
     	};
-    	if ($(".rd").length) {
-			rd_slider();
-		};
 	});
 	$(window).resize(function(){
 		MapSize();
 		people();
-		if ($(".rd").length) {
-			rd_slider();
-		};
+
 	});
 
 // document click
