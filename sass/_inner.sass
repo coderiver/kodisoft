@@ -265,6 +265,8 @@
 		 			
 //restaurant
 .restaurant
+	// height: 700px 
+	// background: #E6E6E6 
 	&__img
 		position: relative
 		height: 558px
@@ -550,6 +552,9 @@
 			width: auto
 			min-width: 100%			
 .avimir
+	height: 700px 
+	overflow: hidden
+	background: #EA5032 
 	.slider__item
 		background: #ea5032
 		height: 700px
@@ -559,6 +564,7 @@
 			width: 0
 			height: 100%
 			vertical-align: middle
+			display: none
 		img
 			display: inline-block
 			vertical-align: middle
@@ -573,8 +579,9 @@
 			max-width: 100%
 			
 .idbm
-	height: 690px 
+	height: 700px 
 	overflow: hidden
+	background: #EDF1F6 
 	.slider__item
 		position: relative
 		height: 700px 
@@ -593,29 +600,35 @@
 		font-size: 28px
 		text-align: left
 .bookpro
+	background: #CDF000 
 	.slider__item
 		background: #cdf000
 		height: 700px
 		img
 			min-width: 1px 
-		// &:before
-		// 	content: ""
-		// 	display: inline-block
-		// 	width: 0
-		// 	height: 100%
-		// 	vertical-align: middle
+			height: auto 
+		&:before
+			content: ""
+			display: inline-block
+			width: 0
+			height: 100%
+			vertical-align: middle
 		img
 			display: inline-block
 			max-width: 100% 
 			vertical-align: middle
 .bussinesspro
-	height: 584px 
+	height: 700px 
 	overflow: hidden
+	background: #333740 
 	.slider__item
 		background: #333741
+		height: 700px 
 		img
 			min-width: 1px 
+			height: auto 
 .portal
+	background: #5EC8FF 
 	.slider__item
 		background: #5ac6ff
 		height: 700px
@@ -630,6 +643,8 @@
 			vertical-align: middle
 			min-width: 1px 
 			height: auto
+.medicalpro
+	background: #7AEBFF 
 .medicalpro, .prodoffice, .doll
 	.slider__item
 		height: 700px
@@ -658,11 +673,16 @@
 		text-align: center
 		font-size: 0
 .prodoffice
+	background: #F0F3E9
+	height: 700px  
 	.slider__item
 		background: #f0f3e9 
 		img
 			height: auto 		 		
-.doll		 						 			 		 			 		
+.doll
+	height: 700px 		 						 			 		 			 		
+	overflow: hidden
+	background: #f56e97
 	.slider__item
 		background: #f56e97
 .witboard
@@ -688,6 +708,9 @@
 		img
 			width: 100%
 .agelma
+	background: #FFD101
+	height: 700px  
+	overflow: hidden
 	.slider__item
 		background: #ffd101 
 		height: 700px
@@ -705,8 +728,12 @@
 			min-width: 1px 
 			height: auto 
 .lesexpress
+	background: url(../img/pict9.jpg) no-repeat 50% 0
+	.slider
+		height: 700px 
+		overflow: hidden
 	.slider__item
-		background: url(../img/pict9.jpg)
+		//background: url(../img/pict9.jpg)
 		+cover
 		height: 700px
 		&:before
@@ -801,7 +828,11 @@
 		font-size: 0
 		img
 			width: 100%
-.cnc			 			
+.cnc	
+	background: #a2efef 
+	.slider
+		overflow: hidden
+		height: 700px 		 			
 	.slider__item
 		height: 700px
 		background: #a2efef
