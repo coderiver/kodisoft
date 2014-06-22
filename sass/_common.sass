@@ -136,8 +136,10 @@ body
 	text-align: center
 	&.title_white
 		color: #fff
+	.product-page &
+		margin-bottom: 36px 
 .subtitle
-	margin-bottom: 50px
+	margin-bottom: 67px
 	font-size: 56px
 	color: $dark
 	+us
@@ -150,6 +152,8 @@ body
 	height: 110px
 	margin-bottom: 30px
 	z-index: 2
+	&.header_nomargin
+		margin-bottom: 0 
 .logo
 	padding-top: 30px 
 	a
@@ -165,7 +169,7 @@ body
 			position: absolute
 			top: -7px
 			left: 0px
-			+s(logo-green)
+			+s(logo-lightgreen)
 		.laboratory-page &
 			&:before
 				+s(logo-blue)
@@ -215,7 +219,12 @@ body
 					color: #f14047
 			.history-page &
 				&.is-active
-					color: #ebbe07					
+					color: #ebbe07	
+	&.nav_gray
+		.nav__link
+			a
+				&.is-active
+					color: #8f8e8e 
 							
 
 // footer
@@ -262,6 +271,8 @@ body
 .bottom-push
 	height: 125px				
 // btn
+// *
+// 	outline: 1px dotted red
 .btn
 	display: inline-block
 	height: 57px
@@ -270,7 +281,7 @@ body
 	background: $green
 	color: #fff
 	+ur
-	font-size: 18px
+	font-size: 16px
 	+tr(background 200ms)
 	&:hover
 		background: darken($green, 10%)  					
