@@ -338,12 +338,22 @@ body
 	top: 47px
 	right: 22px
 	z-index: 999
+	
+	&.js-scroll-rd
+		//padding-top: 409px
+		.scroll-nav__inner
+			+transition(top .2s linear)
+			opacity: 0 
+			&.is-fixed
+				top: 45% 
+				opacity: 1 
 	&__inner
 		text-align: right
 		&.is-fixed
 			position: fixed
 			top: 47px
 			right: 22px
+			//top: 50vh
 		li
 			a
 				position: relative

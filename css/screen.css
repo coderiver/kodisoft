@@ -123,6 +123,8 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .btn.btn_big { width: 390px; height: 96px; }
 
 .scroll-nav { position: absolute; top: 47px; right: 22px; z-index: 999; }
+.scroll-nav.js-scroll-rd .scroll-nav__inner { -moz-transition: top 0.2s linear; -o-transition: top 0.2s linear; -webkit-transition: top 0.2s linear; transition: top 0.2s linear; opacity: 0; }
+.scroll-nav.js-scroll-rd .scroll-nav__inner.is-fixed { top: 45%; opacity: 1; }
 .scroll-nav__inner { text-align: right; }
 .scroll-nav__inner.is-fixed { position: fixed; top: 47px; right: 22px; }
 .scroll-nav__inner li a { position: relative; font-size: 0px; display: block; min-height: 18px; padding-right: 19px; color: #292929; text-decoration: none; }
