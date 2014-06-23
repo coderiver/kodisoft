@@ -495,8 +495,8 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .products-nav a:hover { color: #1dbeff; }
 
 .product-wrap { position: relative; top: -140px; z-index: 1; }
-.product-wrap .kolight__img { max-height: 690px; overflow: hidden; }
-.product-wrap .slider__item { height: 690px; max-height: 690px; }
+.product-wrap .kolight__img { max-height: 700px; overflow: hidden; }
+.product-wrap .slider__item { height: 700px; max-height: 700px; }
 .product-wrap .products__title { font-size: 96px; }
 
 .product { padding: 20px 0 0; }
@@ -507,7 +507,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .product__descr.leading p { font-size: 24px; }
 .product__img { padding: 50px 0 20px; font-size: 0; text-align: center; max-width: 100%; }
 
-.device { border-top: 2px solid #f3f3f3; padding-top: 40px; }
+.device { border-top: 2px solid #f3f3f3; padding-top: 40px; margin-bottom: 60px; }
 .device__img { margin-bottom: 50px; text-align: center; font-size: 0; }
 .device__img img { max-width: 100%; }
 .device__software { *zoom: 1; }
