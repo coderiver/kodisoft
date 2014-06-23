@@ -10,7 +10,8 @@ head.ready(function() {
 			$(this).cycle({
 				slides: '> div',
 				pager: pager,
-				paused: true
+				paused: true,
+				speed: 600
 			});
 			if ($(window).scrollTop() >= (top - 140)) {
 				$(this).cycle('resume');

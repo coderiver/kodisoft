@@ -511,15 +511,20 @@
 		img
 			max-width: 100%
 .mcloud
+	height: 700px 
+	background: #20BDF1 url(../img/mcloud.jpg) no-repeat 50% 0
+	overflow: hidden
 	&__img
 		position: relative
 		font-size: 0
-		max-height: 700px 
+		height: 700px 
 		overflow: hidden
-		background: #00bcf2
+		//background: #00bcf2
 		text-align: center
+		position: relative
+		top: 40px 
 		img
-			width: 100%
+			//width: 100%
 +keyframes(anim1)
 	0%, 100%
 		+transform(translate(0px, 0px))
@@ -617,6 +622,8 @@
 		text-align: left
 .bookpro
 	background: #CDF000 
+	height: 700px 
+	overflow: hidden
 	.slider__item
 		background: #cdf000
 		height: 700px
@@ -645,6 +652,8 @@
 			height: auto 
 .portal
 	background: #5EC8FF 
+	height: 700px 
+	overflow: hidden
 	.slider__item
 		background: #5ac6ff
 		height: 700px
@@ -661,6 +670,8 @@
 			height: auto
 .medicalpro
 	background: #7AEBFF 
+	height: 700px 
+	overflow: hidden
 .medicalpro, .prodoffice, .doll
 	.slider__item
 		height: 700px
@@ -738,6 +749,7 @@
 			width: 0
 			height: 100%
 			vertical-align: middle
+			display: none
 		img
 			display: inline-block
 			vertical-align: middle
@@ -769,10 +781,13 @@
 		img
 			width: 100%			
 .inthouse
+	height: 700px 
+	overflow: hidden
 	&__img
 		position: relative
 		height: 700px
 		background: #ffd101 url(../img/img33.png) 50% 50% no-repeat
+		top: 40px 
 	&__icons
 		position: absolute
 		top: 0
