@@ -77,7 +77,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .nav { text-align: right; }
 .nav__list { padding-top: 39px; font-size: 0; }
 .nav__link { display: inline-block; margin-left: 45px; font-size: 21px; }
-.nav__link a { color: #292929; font-family: "unit_slab_offc_proregular", arial, sans-serif; text-decoration: none; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
+.nav__link a { color: #292929; color: #595959; font-family: "unit_slab_offc_proregular", arial, sans-serif; text-decoration: none; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
 .nav__link a:hover { color: #8f8e8e; }
 .nav__link a.is-active { color: #73d037; }
 .laboratory-page .nav__link a.is-active { color: #00d1fe; }
