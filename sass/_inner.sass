@@ -20,6 +20,7 @@
 	&__text		
 		position: absolute
 		bottom: 70px
+		bottom: 44px 
 		left: 50%
 		margin-left: -579px
 		padding: 18px 24px
@@ -89,6 +90,9 @@
 	font-size: 18px
 	+tr(color 200ms)	
 	line-height: 23px 
+	.news_small &
+		font-size: 16px 
+		line-height: 20px 
 .news__more 
 	text-align: center
 	margin-bottom: 70px
@@ -100,6 +104,7 @@
 // laboratory
 .menu
 	margin-bottom: 140px
+	margin-bottom: 40px 
 	&__list
 		+clr
 	&__item
@@ -111,12 +116,14 @@
 		overflow: hidden
 		max-height: 800px
 		font-size: 0
-		background: #000
-		img
+		background: transparent
+		+background-size(cover)
+		img,&>div
 			min-width: 100%
 			min-height: 100%
 			+transition(opacity 200ms)
 			+gpu
+
 		span
 			position: absolute
 			top: 50%
@@ -132,9 +139,10 @@
 			span
 				color: #1b1b1b
 		&:hover
-			img
+			img,div
 				+opacity(.7)
 	&.menu_company
+		margin-bottom: 40px 
 		.menu__item
 			width: 20%
 		.menu__link	
@@ -189,16 +197,22 @@
 		position: relative
 		height: 100%
 		background: #ffd529
+		background-position: 50% 50%
+		background-repeat: no-repeat 
 		.rd__title
 			color: $dark
 	&__restaurant
 		position: relative
 		height: 100%
 		background: #009539
+		background-position: 50% 80% 
+		background-repeat: no-repeat 
 	&__fashion
 		position: relative
 		height: 100%
 		background: #ff014a
+		background-position: 50% 50%
+		background-repeat: no-repeat 
 	&__title
 		padding: 50px 0 
 		font-size: 72px
@@ -217,8 +231,7 @@
 			vertical-align: middle
 		img
 			display: inline-block
-			vertical-align: middle
-			
+			vertical-align: middle 
 .products
 	position: relative
 	&__inner
