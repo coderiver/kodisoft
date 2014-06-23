@@ -189,7 +189,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .date { font-size: 17px; color: #878787; }
 
-.news__text { font-size: 18px; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
+.news__text { font-size: 18px; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; line-height: 23px; }
 
 .news__more { text-align: center; margin-bottom: 70px; }
 .news__more a { font-size: 20px; text-decoration: none; color: #8dbb00; }
