@@ -79,6 +79,7 @@
 	margin-bottom: 8px
 	font-size: 24px 
 	color: $dark
+	line-height: 1.2
 	+tr(color 200ms)
 	+usb
 	.row_inline &
@@ -86,6 +87,7 @@
 .date
 	font-size: 17px
 	color: #878787	
+	margin-bottom: 6px 
 .news__text
 	font-size: 18px
 	+tr(color 200ms)	
@@ -105,6 +107,7 @@
 .menu
 	margin-bottom: 140px
 	margin-bottom: 40px 
+	background: #000 
 	&__list
 		+clr
 	&__item
@@ -438,6 +441,10 @@
 			left: 50%
 			margin-left: -620px 
 			z-index: 2
+			img
+				position: relative
+				top: 83px 
+				left: -15px 
 			.hint
 				bottom: 97px
 				left: 125px
@@ -455,6 +462,10 @@
 			left: 50%
 			margin-left: -24px 
 			z-index: 2
+			img
+				position: relative
+				top: -3px 
+				left: 31px 
 			.hint
 				bottom: 97px
 				left: 125px
@@ -689,8 +700,10 @@
 			min-width: 1px 
 			height: auto 
 .master-test
+	height: 700px 
 	&__img
 		font-size: 0
+		height: 700px 
 		img
 			width: 100%
 .pseudo-weber
@@ -787,7 +800,7 @@
 		position: relative
 		height: 700px
 		background: #ffd101 url(../img/img33.png) 50% 50% no-repeat
-		top: 40px 
+		//top: 40px 
 	&__icons
 		position: absolute
 		top: 0
