@@ -71,11 +71,11 @@ var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : 
     });
 	
 
-	$(document).scrollsnap({
-        snaps: '.products__item',
-        proximity: 40,
-        easing: 'easeOutBack'
-        });
+	// $(document).scrollsnap({
+ //        snaps: '.products__item',
+ //        proximity: 40,
+ //        easing: 'easeOutBack'
+ //        });
 	
 	function SliderInit(){
 		$(".js-slider").each(function(){
