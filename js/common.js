@@ -1,7 +1,81 @@
 head.ready(function() {
 
 // cycle init
+
+function findnext(){
+	console.log('runnext');
+	var scrollPosition = $(window).scrollTop();
+	$('.products__item').each(function() {
+        var that = $(this);
+        artPosition = that.offset().top;
+        dv = artPosition - scrollPosition;
+        //console.log(dv);
+        
+        if (dv > 10 && dv<600 && !running) {
+        	var running = 1;
+        	console.log($('.products__item').index(that));
+            target = that;
+            //$.scrollTo(target, 400, {axis:'y', easing:'easeInOutQuart'});
+
+            $('body').animate({
+		        scrollTop: $(this).offset().top
+		    }, 300,function(){running = 0;});	
+            console.log('runed');
+            return false;
+        }
+    });
+}
+function findprev(){
+	console.log('runprev');
+	var scrollPosition = $(window).scrollTop();
+	$('.products__item').each(function() {
+        var that = $(this);
+        artPosition = that.offset().top;
+        dv = artPosition - scrollPosition;
+        //console.log(dv);
+        
+        if (dv < -10 && dv>-600 && !running) {
+        	var running = 1;
+        	console.log($('.products__item').index(that));
+            target = that;
+            //$.scrollTo(target, 400, {axis:'y', easing:'easeInOutQuart'});
+
+            $('body').animate({
+		        scrollTop: $(this).offset().top
+		    }, 300,function(){running = 0;});	
+            console.log('runed');
+            return false;
+        }
+    });
+}
+
+findnext1 = _.debounce(findnext, 30, true);
+findprev1 = _.debounce(findprev, 30, true);
+var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
+    $('body').bind(mousewheelevt, function(e){
+        	//console.log('gogog');
+        	
+            var evt = window.event || e //equalize event object     
+            evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+            var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+            
+            if(delta > 0) {
+                findprev1();
+            }
+            else{
+	            findnext1();			    
+            }   
+            //return false;
+        
+
+    });
 	
+
+	$(document).scrollsnap({
+        snaps: '.products__item',
+        proximity: 40,
+        easing: 'easeOutBack'
+        });
 	
 	function SliderInit(){
 		$(".js-slider").each(function(){
@@ -176,10 +250,16 @@ if($(".rd").length){
 
 
 	$(window).scroll(function(event) {
+		//alert('a');
 		if ($(window).scrollTop() >= top ){
 			$('body').addClass('slider-mode');
 		}
 	});
+
+
+
+
+
 	$('.scroll-nav__inner li:first-child').addClass('is-first');
 	$('.scroll-nav__inner li:last-child').addClass('is-last');
 
