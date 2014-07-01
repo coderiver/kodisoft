@@ -114,12 +114,21 @@
 .menu
 	margin-bottom: 140px
 	margin-bottom: 40px 
-	background: #000 
+	//background: #000 
 	&__list
 		+clr
+		position: relative
 	&__item
 		float: left
 		width: 33.333% 
+		background: #000 
+		&.is-last
+			position: absolute
+			width: 33.633%
+			right: 0
+			top: 0
+			  
+			
 	&__link
 		position: relative
 		display: block
@@ -156,6 +165,8 @@
 		margin-bottom: 0 !important 
 		.menu__item
 			width: 20%
+			&.is-last
+				width: 20.5% 
 		.menu__link	
 			max-height: 738px	
 	&.menu_lab
