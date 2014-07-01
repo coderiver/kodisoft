@@ -298,7 +298,9 @@
 		position: relative
 		height: 558px 
 		height: 700px 
+		
 		background: #e6e6e6 url(../img/restaurant1.jpg) 50% 0 no-repeat
+		background-color: #E4E5E9 
 		text-align: center
 		top: 100% 
 		font-size: 0
@@ -320,6 +322,7 @@
 				left: 30px
 				width: 185px
 				height: 22px
+				width: 110px 
 				&.is-open
 					width: 390px
 					height: 106px
@@ -330,13 +333,14 @@
 		&.terminal
 			top: 176px + 73px
 			left: 50%
-			margin-left: 393px 
+			margin-left: 393px - 3px 
 			z-index: 2
 			.hint
 				bottom: 65px
-				left: -75px
+				left: -75px + 70px
 				width: 185px
 				height: 22px
+				width: 110px 
 				&.is-open
 					width: 220px
 					height: 106px
@@ -351,9 +355,10 @@
 			z-index: 1
 			.hint
 				bottom: 25px
-				left: 34px
+				left: 34px + 30px
 				width: 185px
 				height: 22px
+				width: 110px 
 				&.is-open
 					width: 390px
 					height: 80px
@@ -368,9 +373,10 @@
 			z-index: 1
 			.hint
 				bottom: 54px
-				left: -87px
+				left: -87px + 40px
 				width: 185px
 				height: 22px
+				width: 110px 
 				&.is-open
 					width: 390px
 					height: 80px
@@ -385,9 +391,10 @@
 			z-index: 2
 			.hint
 				bottom: 250px
-				left: 22px
+				left: 22px + 30px
 				width: 185px
 				height: 22px
+				width: 120px 
 				&.is-open
 					width: 390px
 					height: 73px
@@ -402,9 +409,11 @@
 			z-index: 2
 			.hint
 				bottom: 60px
-				left: 22px
+				left: 22px + 36px
 				width: 185px
 				height: 22px
+				width: 110px 
+				
 				&.is-open
 					width: 390px
 					height: 73px
@@ -419,9 +428,10 @@
 			z-index: 2
 			.hint
 				bottom: 40px
-				left: 22px
+				left: 22px +35px
 				width: 185px
 				height: 22px
+				width: 120px 
 				&.is-open
 					width: 390px
 					height: 73px
@@ -436,9 +446,10 @@
 			z-index: 2
 			.hint
 				bottom: 40px
-				left: 22px
+				left: 22px + 35px
 				width: 185px
 				height: 22px
+				width: 120px 
 				&.is-open
 					width: 390px
 					height: 73px
@@ -457,9 +468,10 @@
 				left: -15px 
 			.hint
 				bottom: 97px
-				left: 125px
+				left: 125px + 30px
 				width: 185px
 				height: 22px
+				width: 120px 
 				&.is-open
 					width: 390px
 					height: 73px
@@ -478,9 +490,11 @@
 				left: 31px 
 			.hint
 				bottom: 97px
-				left: 125px
+				left: 125px + 35px
 				width: 185px
 				height: 22px
+				width: 120px 
+				
 				&.is-open
 					width: 390px
 					height: 73px
@@ -490,9 +504,10 @@
 						height: 16px																												 			 			  			 
 .hint
 	position: absolute	 
-	font-size: 12px
+	font-size: 13px
 	color: #fff
 	padding: 7px 13px
+	padding: 5px 13px 3px 13px
 	text-align: left 
 	background: #000
 	+transition(all 200ms)
@@ -502,7 +517,8 @@
 		content: ""
 		position: absolute
 		bottom: -8px
-		left: 112px
+		left: 50%
+		margin-left: -4px 
 		+arr(13, 8, #000, b)
 	&__title
 		text-align: center
