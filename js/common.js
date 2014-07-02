@@ -123,7 +123,8 @@ var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : 
 				slides: '> div',
 				pager: pager,
 				paused: true,
-				speed: 600
+				speed: 600,
+				swipe: true
 			});
 			if ($(window).scrollTop() >= (top - 140)) {
 				$(this).cycle('resume');
