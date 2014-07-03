@@ -270,7 +270,7 @@ var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : 
 
 
 // rd slider
-if($(".rd").length){
+if($(".rd").length && !head.touch){
 	var b = $('body');
 	var item = $(".rd__item");
 	var top = $(".rd").offset().top;
