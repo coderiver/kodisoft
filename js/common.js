@@ -1,5 +1,13 @@
 head.ready(function() {
 
+
+
+
+$(".content").swipe({
+  swipe:function(event, direction, distance, duration, fingerCount) {
+    alert("You swiped " + direction );
+  }
+});
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
 var keys = [37, 38, 39, 40];
@@ -123,8 +131,7 @@ var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : 
 				slides: '> div',
 				pager: pager,
 				paused: true,
-				speed: 600,
-				swipe: true
+				speed: 600
 			});
 			if ($(window).scrollTop() >= (top - 140)) {
 				$(this).cycle('resume');
