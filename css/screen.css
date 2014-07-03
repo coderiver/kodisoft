@@ -65,6 +65,7 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 
 .logo { padding-top: 30px; }
 .logo a { position: relative; display: inline-block; padding-left: 75px; font-size: 26px; color: #292929; vertical-align: top; font-family: "unit_slab_offc_proregular", arial, sans-serif; text-decoration: none; }
+.touch .logo a { color: red; }
 .logo a:before { content: ""; position: absolute; top: -7px; left: 0px; background: url('../img/icons-sdd241cc2c4.png') 0 -1465px no-repeat; width: 51px; height: 51px; }
 .laboratory-page .logo a:before { background: url('../img/icons-sdd241cc2c4.png') 0 -1282px no-repeat; width: 51px; height: 51px; }
 .product-page .logo a:before { background: url('../img/icons-sdd241cc2c4.png') 0 -1343px no-repeat; width: 51px; height: 51px; }
