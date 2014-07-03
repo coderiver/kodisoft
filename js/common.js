@@ -1,11 +1,11 @@
 head.ready(function() {
 
+//alert('a');
 
 
-
-$(".content").swipe({
+$("body").swipe({
   swipe:function(event, direction, distance, duration, fingerCount) {
-    alert("You swiped " + direction );
+    //alert("You swiped " + direction );
   }
 });
 // left: 37, up: 38, right: 39, down: 40,
