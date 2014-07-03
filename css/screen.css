@@ -639,10 +639,10 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .history__title { margin-bottom: 50px; padding-top: 120px; font-size: 96px; line-height: 1; font-family: "unit_slab_offc_probold", arial, sans-serif; }
 
 .people { font-size: 0; margin-bottom: 85px; }
-.people__item { display: inline-block; vertical-align: top; width: 16.666%; font-size: 0; background: #f02e39; }
-.people__item img { width: 100%; height: 100%; }
+.people__item { display: inline-block; vertical-align: top; width: 16.666%; font-size: 0; background: #f02e39; overflow: hidden; position: relative; height: 0; padding-bottom: 16.666%; }
+.people__item img { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 
-.occupation { padding: 30px; color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 33px; line-height: 1; font-family: "unit_slab_offc_proregular", arial, sans-serif; }
+.occupation { padding: 30px; color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 33px; line-height: 1; font-family: "unit_slab_offc_proregular", arial, sans-serif; position: absolute; top: 0; left: 0; }
 
 .vacancy__item { display: block; margin-bottom: 65px; text-decoration: none; }
 .vacancy__item:hover .vacancy__title { color: #73d037; }

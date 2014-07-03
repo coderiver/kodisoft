@@ -233,10 +233,10 @@ var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : 
 // people
 	
 	function people(){
-		var h = $(".js-people").outerHeight();
+		var h = $(".js-people:first-child").width();
 		$(".occupation").css('height', h);
 	}
-	people();
+	//people();
 
 // hint
 	if ($(".hint").length) {
