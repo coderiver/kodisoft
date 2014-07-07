@@ -132,6 +132,8 @@ body { min-width: 1158px; font-size: 16px; font-family: "UnitRegularRegular", ar
 .scroll-nav__inner li a:hover { font-size: 13px; }
 .scroll-nav__inner li a.is-active:before { top: 4px; right: 0; border: 2px solid #292929; border: 2px solid #595959; background: transparent; }
 
+.test { width: auto; height: 1000px; background: pink; border: 2px solid red; }
+
 .container { width: 1158px; margin: 0 auto; }
 
 .row { *zoom: 1; margin-left: -18px; }

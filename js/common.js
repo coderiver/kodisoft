@@ -1,8 +1,38 @@
+$(function() {			
+					//Enable swiping...
+					$(".js-slider").swipe( {
+						//Generic swipe handler for all directions
+						swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+							//$(this).text( direction + $(this).find('.js-slider').html() );
+							
+							if(direction=='left'){
+								$(this).cycle('next');
+							}
+							else{
+								$(this).cycle('prev');
+							}
+						},
+						//Default is 75px, set to 0 for demo so any distance triggers swipe
+					   threshold:0
+					});
+				});
+
 head.ready(function() {
 
 //alert('a');
 
 
+//.avimir
+
+//.avimir
+// $(".test").swipe( {
+//         //Generic swipe handler for all directions
+//         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+//           alert("You swiped " + direction );  
+//         },
+//         //Default is 75px, set to 0 for demo so any distance triggers swipe
+//          threshold:0
+//       });
 // $("body").swipe({
 //   swipe:function(event, direction, distance, duration, fingerCount) {
 //     //alert("You swiped " + direction );
