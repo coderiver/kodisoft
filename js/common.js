@@ -6,10 +6,10 @@ $(function() {
 							//$(this).text( direction + $(this).find('.js-slider').html() );
 							
 							if(direction=='left'){
-								$(this).cycle('next');
+								$(this).cycle('prev');
 							}
 							else{
-								$(this).cycle('prev');
+								$(this).cycle('next');
 							}
 						},
 						//Default is 75px, set to 0 for demo so any distance triggers swipe
